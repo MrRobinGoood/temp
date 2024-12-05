@@ -1,0 +1,365 @@
+/* Основные цвета */
+:root {
+    --color-black: #000;
+    --color-white: #fff;
+    --color-gold: #ffd700;
+    --color-gray: #e0e0e0;
+    --color-light-gray: #f5f5f5;
+    --color-blue: #007bff;
+    --color-red: #dc3545;
+}
+
+/* Шрифты */
+@font-face {
+    font-family: 'Montserrat';
+    src: url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600&display=swap') format('woff2');
+    font-weight: 400;
+    font-style: normal;
+}
+
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+    color: var(--color-black);
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa;
+}
+
+/* Шапка */
+.header {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 24px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+}
+
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.menu li {
+    margin-right: 20px;
+}
+
+.menu a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.menu a:hover {
+    color: var(--color-gold);
+}
+
+/* Основное содержимое */
+.content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 50px 20px;
+}
+
+/* Разделы */
+.home-section,
+.tariffs-section,
+.features-section,
+.about-section,
+.reviews-section,
+.feedback-section {
+    background-color: var(--color-white);
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    padding: 30px;
+    overflow: hidden;
+}
+
+/* Тарифы */
+.tariffs-section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.tariff-card {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 12px;
+    padding: 25px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.tariff-card:hover {
+    transform: translateY(-5px);
+}
+
+.support-button {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.support-button:hover {
+    background-color: #ffd700cc;
+    transform: translateY(-2px);
+}
+
+/* Особенности */
+.features-section {
+    background-color: var(--color-light-gray);
+}
+
+/* Отзывы */
+.reviews-section {
+    padding-top: 0;
+}
+
+.review-card {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    border-radius: 12px;
+    margin-bottom: 30px;
+    padding: 25px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.review-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to right, transparent, var(--color-gold), transparent);
+    opacity: 0.1;
+    z-index: 1;
+}
+
+/* Обратная связь */
+.feedback-section form {
+    display: flex;
+    flex-direction: column;
+    max-width: 450px;
+    margin: 0 auto;
+}
+
+.feedback-section input,
+.feedback-section textarea {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: 1px solid var(--color-gray);
+    border-radius: 8px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    resize: none; /* Добавлено свойство resize: none; */
+}
+
+.feedback-section button[type="submit"] {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.feedback-section button[type="submit"]:hover {
+    background-color: #ffd700cc;
+    transform: translateY(-2px);
+}
+
+/* Футер */
+.footer {
+    background-color: var(--color-black);
+    color: var(--color-white);
+    padding: 30px 0;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    width: 100%;
+    height: 60px;
+    background: linear-gradient(to top, transparent, var(--color-gold), transparent);
+    z-index: 1;
+}
+
+.footer ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.footer li {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer a {
+    color: var(--color-white);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: var(--color-gold);
+}
+
+/* Стили для кнопок */
+.cta-button,
+.support-button {
+    background-color: var(--color-gold);
+    color: var(--color-black);
+    border: none;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover,
+.support-button:hover {
+    background-color: #ffd700cc;
+    transform: translateY(-2px);
+}
+
+/* Стили для текста */
+h1, h2, h3 {
+    color: var(--color-black);
+    font-family: 'Montserrat', sans-serif;
+}
+
+p {
+    color: var(--color-gray);
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Адаптивность для мобильных устройств */
+@media screen and (max-width: 767px) {
+    .header {
+        flex-wrap: wrap;
+    }
+
+    .logo {
+        order: 2;
+        margin-top: 10px;
+    }
+
+    .menu {
+        order: 1;
+        width: 100%;
+        margin-top: 10px;
+        background-color: var(--color-black);
+        color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .menu ul {
+        flex-direction: column;
+        width: 100%;
+        padding: 15px 0;
+    }
+
+    .menu li {
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+
+    .menu a {
+        display: block;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu a:hover {
+        color: var(--color-gold);
+    }
+
+    .menu.active {
+        display: block;
+    }
+
+    .menu-icon {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 40px;
+        height: 30px;
+        cursor: pointer;
+    }
+
+    .menu-icon span {
+        background-color: var(--color-white);
+        border-radius: 50%;
+        width: 24px;
+        height: 2px;
+        margin-bottom: 6px;
+    }
+}
+
+/* Стили для мобильных устройств */
+@media screen and (max-width: 767px) {
+    .content {
+        padding: 25px;
+    }
+
+    .home-section,
+    .tariffs-section,
+    .features-section,
+    .about-section,
+    .reviews-section,
+    .feedback-section {
+        padding: 25px;
+    }
+
+    .tariff-card {
+        padding: 20px;
+    }
+
+    .support-button {
+        padding: 10px 16px;
+    }
+
+    .review-card {
+        margin-bottom: 25px;
+    }
+
+    /* Добавьте эти стили внутрь тега <style> или в отдельный CSS файл */
+    .menu-icon {
+        display: none;
+    }
+}

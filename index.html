@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JurAI - Правовой ассистент</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <script src="script.js"></script>
+</head>
+<body>
+    <header class="header">
+        <div class="logo-container">
+            <span class="logo">JurAI</span>
+        </div>
+        
+        <nav class="menu">
+            <ul>
+                <li><a href="#home">Главная</a></li>
+                <li><a href="#tariffs">Тарифы</a></li>
+                <li><a href="#features">Особенности</a></li>
+                <li><a href="#about">О нас</a></li>
+                <li><a href="#reviews">Отзывы</a></li>
+                <li><a href="#feedback">Обратная связь</a></li>
+                <li><a href="#contacts">Контакты</a></li>
+            </ul>
+        </nav>
+        <div class="menu-icon"></div>
+    </header>
+    
+    <style>
+        /* Добавьте этот стиль внутрь тега <style> или в отдельный CSS файл */
+        .menu-icon {
+            display: none;
+        }
+    </style>
+
+    <main class="content">
+        <section id="home" class="home-section">
+            <h1>Правовой ассистент JurAI</h1>
+            <p>Умный помощник для подбора судебной практики</p>
+            <button class="cta-button" id="start-button">Начать использовать</button>
+        </section>
+
+        <section id="tariffs" class="tariffs-section">
+            <h2>Выберите план</h2>
+            <div class="tariff-card">
+                <h3 style="color: white;">Базовый</h3>
+                <p>Включает базовые функции</p>
+                <button onclick="location.href='#feedback'" class="support-button">Получить</button>
+            </div>
+            <div class="tariff-card">
+                <h3 style="color: white;">Профессиональный</h3>
+                <p>Дополнительно включает анализ данных</p>
+                <button onclick="location.href='#feedback'" class="support-button">Получить</button>
+            </div>
+            <div class="tariff-card">
+                <h3 style="color: white;">Экспертный</h3>
+                <p>Полный доступ к экспертному анализу</p>
+                <button onclick="location.href='#feedback'" class="support-button">Получить</button>
+            </div>
+        </section>
+
+        <section id="features" class="features-section">
+            <h2>Как работает наше решение?</h2>
+            <p>Используя передовые технологии машинного обучения, мы предоставляем точные и актуальные рекомендации по юридическим вопросам.</p>
+        </section>
+
+        <section id="about" class="about-section">
+            <h2>Наша команда</h2>
+            <p>Мы - команда опытных разработчиков и юристов, стремящихся сделать юридическую помощь более эффективной и доступной.</p>
+        </section>
+
+        <section id="reviews" class="reviews-section">
+            <h2>Что говорят наши клиенты</h2>
+            <div class="review-card">
+                <p>Отличный инструмент для быстрого получения информации о юридических вопросах!</p>
+                <span>Иван Иванов</span>
+            </div>
+            <div class="review-card">
+                <p>JurAI помог мне найти оптимальное решение для моей юридической проблемы.</p>
+                <span>Анна Петрова</span>
+            </div>
+        </section>
+
+        <section class="feedback-section" id="feedback">
+            <h2>Свяжитесь с нами</h2>
+            <form action="">
+                <input type="text" placeholder="Фамилия" required>
+                <input type="text" placeholder="Имя" required>
+                <input type="email" placeholder="E-mail" required>
+                <textarea placeholder="Ваш отзыв"></textarea>
+                <button type="submit">Отправить</button>
+            </form>
+        </section>
+
+        <footer id="contacts" class="footer">
+            <h3>Свяжитесь с нами:</h3>
+            <ul>
+                <li><a href="#"><i class="fa fa-phone"></i> +7 (927) 000-00-00</a></li>
+                <li><a href="#"><i class="fa fa-envelope"></i> info@jurai.ru</a></li>
+                <li><a href="https://t.me/jur_ai"><i class="fa fa-github"></i> Telegram</a></li>
+                <li><a href="#"><i class="fa fa-linkedin"></i> VK</a></li>
+            </ul>
+            <p>&copy; 2024 JurAI. Все права защищены.</p>
+        </footer>
+    </main>
+
+    <!-- Добавьте этот фрагмент в конце тела документа -->
+    <div id="feedback-anchor"></div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const startButton = document.getElementById('start-button');
+            
+            startButton.addEventListener('click', function() {
+                window.location.href = 'http://jurai.ru:81/';
+            });
+        });
+        </script>
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
